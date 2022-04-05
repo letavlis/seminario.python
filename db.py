@@ -1,5 +1,4 @@
 import sqlite3
-import Pessoa
 
 # conexão com banco de dados
 conn = sqlite3.connect("Pessoa.db")
