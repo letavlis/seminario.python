@@ -1,6 +1,5 @@
 import db
 import Repositorio as repoP
-import os
 
 
 def main():
