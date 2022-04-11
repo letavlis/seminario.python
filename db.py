@@ -26,17 +26,20 @@ def adicionar(pessoa):
     conn.commit()
 
 
+# atualiza pessoa
 def atualizar(id_pessoa, email, telefone, endereco):
     conn.execute("update pessoa set email=?, telefone=?, endereco=? where id=?",
                  (email, telefone, endereco, id_pessoa))
     conn.commit()
 
 
+# remove pessoa
 def remover(id_pessoa):
     conn.execute("delete from pessoa where id = ?", (id_pessoa,))
     conn.commit()
 
 
+# mostra pessoa
 def get_pessoa():
     cursor.execute("select * from pessoa")
     return cursor.fetchall()
